@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Enviar los datos al servidor
         try {
-            const response = await fetch('https://tu-backend.onrender.com/api/contacto', {
+            const response = await fetch('https://proyecto-celulares.onrender.com/api/contacto', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
