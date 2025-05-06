@@ -53,6 +53,8 @@ db.connect((err) => {
 app.post('/api/contacto', (req, res) => {
     const { nombre, correo, telefono, asunto, mensaje } = req.body;
 
+    console.log('Datos recibidos:', { nombre, correo, telefono, asunto, mensaje });
+
     const query = 'INSERT INTO contactos (nombre, correo, telefono, asunto, mensaje) VALUES (?, ?, ?, ?, ?)';
     db.query(query, [nombre, correo, telefono, asunto, mensaje], (err, result) => {
         if (err) {
@@ -60,6 +62,7 @@ app.post('/api/contacto', (req, res) => {
             res.status(500).send('Error al guardar los datos.');
             return;
         }
+        console.log('Datos guardados exitosamente:', result);
         res.status(200).send('Datos guardados exitosamente.');
     });
 });
