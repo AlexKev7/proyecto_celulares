@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras | Tienda de Celulares</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="../assets/images/icons/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Barra de Navegación -->
+    <header class="header">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/logos/logo-tienda.png" alt="Logo Tienda de Celulares">
+            </a>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="login.html">Iniciar Sesión</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon">
+                <a href="carrito.html" aria-label="Carrito de compras">
+                    <i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido principal del carrito -->
+    <main class="cart-container">
+        <div class="container">
+            <h1>Tu Carrito de Compras</h1>
+            
+            <!-- Lista de productos -->
+            <div class="cart-items">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <th>Total</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-items-list">
+                        <!-- Los productos se llenarán dinámicamente con JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Resumen de compra -->
+            <div class="cart-summary">
+                <h2>Resumen de Compra</h2>
+                <div class="summary-details">
+                    <p>Subtotal: <span id="subtotal">S/ 0</span></p>
+                    <p>Descuento: <span id="discount">S/ 0</span></p>
+                    <p class="total">Total: <span id="total">S/ 0</span></p>
+                </div>
+                <div class="cart-actions">
+                    <button class="btn btn-empty" id="empty-cart">Vaciar Carrito</button>
+                    <button class="btn btn-continue" id="continue-shopping">Continuar Comprando</button>
+                    <button class="btn btn-checkout" id="checkout">Pagar Ahora</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p><i class="fas fa-phone"></i> +51 974 225 039</p>
+                <p><i class="fas fa-envelope"></i> kevlex.delacruz@gmail.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="contacto.html">Soporte</a></li>
+                    <li><a href="registro.html">Crear Cuenta</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Tienda de Celulares. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/carrito.js"></script>
+</body>
+</html>

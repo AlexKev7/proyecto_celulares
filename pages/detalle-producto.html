@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone 15 Pro | Tienda de Celulares</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="../assets/images/icons/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Barra de Navegación -->
+    <header class="header">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/logos/logo-tienda.png" alt="Logo Tienda de Celulares">
+            </a>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="login.html">Iniciar Sesión</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon">
+                <a href="carrito.html" aria-label="Carrito de compras">
+                    <i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido principal del detalle -->
+    <main class="product-detail-container">
+        <div class="container">
+            <!-- Ruta de navegación (breadcrumbs) -->
+            <nav class="breadcrumbs">
+                <a href="../index.html">Inicio</a> >
+                <a href="catalogo.html">Catálogo</a> >
+                <span>iPhone 15 Pro</span>
+            </nav>
+
+            <!-- Grid de detalle (imagen + info) -->
+            <div class="product-detail-grid">
+                <!-- Galería de imágenes -->
+                <div class="product-gallery">
+                    <div class="main-image">
+                        <img src="../assets/images/productos/iphone-15-pro-max.jpg" alt="iPhone 15 Pro" id="main-image" onerror="this.src='../assets/images/default-product.jpg'">
+                    </div>
+                    <div class="thumbnail-images">
+                        <img src="../assets/images/productos/iphone-15-pro-max-angle.jpg" alt="Vista lateral" onerror="this.src='../assets/images/default-product.jpg'">
+                        <img src="../assets/images/productos/iphone-15-back.jpg" alt="Vista trasera" onerror="this.src='../assets/images/default-product.jpg'">
+                        <img src="../assets/images/productos/iphone-15-box.jpg" alt="Caja incluida" onerror="this.src='../assets/images/default-product.jpg'">
+                    </div>
+                </div>
+
+                <!-- Información del producto -->
+                <div class="product-info">
+                    <h1>iPhone 15 Pro</h1>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>4.7 (128 reseñas)</span>
+                    </div>
+                    <p class="price">S/ 4,999 <span class="old-price">S/ 5,299</span> <span class="discount">-5%</span></p>
+                    <p class="stock">Disponible: <span>En stock (12 unidades)</span></p>
+
+                    <!-- Selectores de variantes -->
+                    <div class="variant-selector">
+                        <label>Color:</label>
+                        <div class="color-options">
+                            <button class="color-option" data-color="blue" style="background-color: #0071e3;" aria-label="Color Azul"></button>
+                            <button class="color-option" data-color="black" style="background-color: #1e1e1e;" aria-label="Color Negro"></button>
+                            <button class="color-option" data-color="white" style="background-color: #f5f5f7;" aria-label="Color Blanco"></button>
+                        </div>
+                    </div>
+
+                    <div class="variant-selector">
+                        <label>Almacenamiento:</label>
+                        <div class="storage-options">
+                            <button class="storage-option">128GB</button>
+                            <button class="storage-option active">256GB</button>
+                            <button class="storage-option">512GB</button>
+                        </div>
+                    </div>
+
+                    <!-- Botones de acción -->
+                    <div class="product-actions">
+                        <div class="quantity-selector">
+                            <button class="quantity-btn minus">-</button>
+                            <input type="number" value="1" min="1" max="10" class="quantity-input">
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="btn btn-add-to-cart">Añadir al Carrito</button>
+                        <button class="btn btn-buy-now">Comprar Ahora</button>
+                    </div>
+
+                    <!-- Acordeón de especificaciones -->
+                    <div class="specs-accordion">
+                        <div class="accordion-item">
+                            <button class="accordion-header" aria-expanded="false">
+                                <span>Especificaciones técnicas</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <ul>
+                                    <li><strong>Pantalla:</strong> 6.1" Super Retina XDR</li>
+                                    <li><strong>Procesador:</strong> A17 Pro</li>
+                                    <li><strong>RAM:</strong> 8GB</li>
+                                    <li><strong>Cámara:</strong> Triple 48MP + 12MP + 12MP</li>
+                                    <li><strong>Batería:</strong> 3274 mAh</li>
+                                    <li><strong>Sistema:</strong> iOS 17</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-header" aria-expanded="false">
+                                <span>Incluye en la caja</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <ul>
+                                    <li>iPhone 15 Pro</li>
+                                    <li>Cable USB-C a USB-C</li>
+                                    <li>Documentación</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección de productos relacionados -->
+            <section class="related-products">
+                <h2 class="section-title">También te podría interesar</h2>
+                <div class="products-grid" id="related-products">
+                    <!-- Los productos relacionados se cargarán dinámicamente con JavaScript -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p><i class="fas fa-phone"></i> +51 974 225 039</p>
+                <p><i class="fas fa-envelope"></i> kevlex.delacruz@gmail.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="contacto.html">Soporte</a></li>
+                    <li><a href="registro.html">Crear Cuenta</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Tienda de Celulares. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/product-detail.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

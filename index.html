@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Celulares | Tecnología y Innovación | Compra Online</title>
+    <meta name="description" content="Encuentra los mejores celulares al mejor precio. iPhone, Samsung, Xiaomi y más. ¡Ofertas exclusivas y envío rápido en Perú!">
+    <meta name="keywords" content="celulares, smartphones, comprar celulares, iPhone, Samsung, Xiaomi, Motorola, ofertas celulares">
+    <meta name="author" content="Tienda de Celulares">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/icons/favicon.ico" type="image/x-icon">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Preload de imágenes importantes -->
+    <link rel="preload" href="assets/images/logos/logo-tienda.png" as="image">
+    <link rel="preload" href="assets/images/productos/iphone-15-pro-max.jpg" as="image">
+</head>
+<body>
+    <!-- Barra de Navegación -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logos/logo-tienda.png" alt="Tienda de Celulares - Logo" width="160" height="50" loading="eager">
+            </a>
+            
+            <button class="menu-toggle" aria-label="Menú de navegación" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav class="navbar" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li><a href="pages/catalogo.html">Catálogo</a></li>
+                    <li><a href="pages/contacto.html">Contacto</a></li>
+                    <li><a href="pages/login.html">Mi Cuenta</a></li>
+                    <li><a href="pages/registro.html">Regístrese</a></li>
+                    <!-- Menú desplegable para Company Kevin -->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" id="company-kevin-toggle">Company Kevin</a>
+                        <ul class="dropdown-menu" id="company-kevin-menu">
+                            <li><a href="pages/vision.html">Visión</a></li>
+                            <li><a href="pages/mision.html">Misión</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="cart-icon">
+                <a href="pages/carrito.html" aria-label="Carrito de compras">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner Principal -->
+    <section class="hero-banner">
+        <div class="container">
+            <div class="banner-content">
+                <h1>Los mejores celulares del mercado</h1>
+                <p>Descuentos exclusivos hasta 30% en modelos seleccionados</p>
+                <div class="cta-buttons">
+                    <a href="pages/catalogo.html" class="btn btn-primary">Ver Catálogo</a>
+                    <a href="#featured" class="btn btn-outline">Ofertas Destacadas</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marcas Destacadas -->
+    <section class="brands-section" aria-labelledby="marcas-destacadas">
+        <div class="container">
+            <h2 class="section-title" id="marcas-destacadas">Trabajamos con las mejores marcas</h2>
+            <div class="brands-grid">
+                <div class="brand-card">
+                    <img src="assets/images/logos/apple-logo.png" alt="Apple" loading="lazy" width="120" height="40">
+                </div>
+                <div class="brand-card">
+                    <img src="assets/images/logos/samsung-logo.png" alt="Samsung" loading="lazy" width="120" height="40">
+                </div>
+                <div class="brand-card">
+                    <img src="assets/images/logos/xiaomi-logo.png" alt="Xiaomi" loading="lazy" width="120" height="40">
+                </div>
+                <div class="brand-card">
+                    <img src="assets/images/logos/motorola-logo.png" alt="Motorola" loading="lazy" width="120" height="40">
+                </div>
+                <div class="brand-card">
+                    <img src="assets/images/logos/huawei-logo.png" alt="Huawei" loading="lazy" width="120" height="40">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Productos Destacados -->
+    <section class="featured-products" id="featured" aria-labelledby="productos-destacados">
+        <div class="container">
+            <h2 class="section-title" id="productos-destacados">Nuestros Productos Destacados</h2>
+            
+            <div class="products-grid">
+                <!-- Producto 1 -->
+                <div class="product-card">
+                    <div class="product-badge">Oferta</div>
+                    <div class="product-image">
+                        <img src="assets/images/productos/iphone-15-pro-max.jpg" 
+                            alt="iPhone 15 Pro Max - 256GB - Color Titanio" 
+                            loading="lazy" 
+                            width="300" 
+                            height="300"
+                            onerror="this.src='assets/images/default-product.jpg'">
+                    </div>
+                    <div class="product-info">
+                        <h3>iPhone 15 Pro Max</h3>
+                        <p class="product-description">Pantalla Super Retina XDR de 6.7", Chip A17 Pro, Cámara triple de 48MP</p>
+                        <div class="price">S/ 4,999 <span class="old-price">S/ 5,499</span></div>
+                        <div class="rating" aria-label="Calificación: 4.5 estrellas">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(128)</span>
+                        </div>
+                        <a href="pages/detalle-producto.html?id=1" class="btn btn-details">Ver Detalles</a>
+                        <button class="btn-add-to-cart" data-id="1">Añadir al Carrito</button>
+                    </div>
+                </div>
+                
+                <!-- Producto 2 -->
+                <div class="product-card">
+                    <div class="product-badge">Nuevo</div>
+                    <div class="product-image">
+                        <img src="assets/images/productos/samsung-galaxy-s23.jpg" 
+                            alt="Samsung Galaxy S23 Ultra - 512GB - Color Negro" 
+                            loading="lazy"
+                            width="300"
+                            height="300"
+                            onerror="this.src='assets/images/default-product.jpg'">
+                    </div>
+                    <div class="product-info">
+                        <h3>Samsung Galaxy S23 Ultra</h3>
+                        <p class="product-description">Pantalla Dynamic AMOLED 2X de 6.8", Snapdragon 8 Gen 2, S Pen incluido</p>
+                        <div class="price">S/ 3,799</div>
+                        <div class="rating" aria-label="Calificación: 4 estrellas">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(96)</span>
+                        </div>
+                        <a href="pages/detalle-producto.html?id=2" class="btn btn-details">Ver Detalles</a>
+                        <button class="btn-add-to-cart" data-id="2">Añadir al Carrito</button>
+                    </div>
+                </div>
+                
+                <!-- Producto 3 -->
+                <div class="product-card">
+                    <div class="product-badge">Más Vendido</div>
+                    <div class="product-image">
+                        <img src="assets/images/productos/xiaomi-13-lite.jpg" 
+                            alt="Xiaomi 13 Lite - 128GB - Color Azul" 
+                            loading="lazy"
+                            width="300"
+                            height="300"
+                            onerror="this.src='assets/images/default-product.jpg'">
+                    </div>
+                    <div class="product-info">
+                        <h3>Xiaomi 13 Lite</h3>
+                        <p class="product-description">Pantalla AMOLED de 6.55", Snapdragon 7 Gen 1, Doble cámara de 50MP</p>
+                        <div class="price">S/ 1,899</div>
+                        <div class="rating" aria-label="Calificación: 5 estrellas">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(215)</span>
+                        </div>
+                        <a href="pages/detalle-producto.html?id=3" class="btn btn-details">Ver Detalles</a>
+                        <button class="btn-add-to-cart" data-id="3">Añadir al Carrito</button>
+                    </div>
+                </div>
+
+                <!-- Producto 4 -->
+                <div class="product-card">
+                    <div class="product-badge">Oferta</div>
+                    <div class="product-image">
+                        <img src="assets/images/productos/motorola-edge-40.jpg" 
+                            alt="Motorola Edge 40 - 256GB - Color Verde" 
+                            loading="lazy"
+                            width="300"
+                            height="300"
+                            onerror="this.src='assets/images/default-product.jpg'">
+                    </div>
+                    <div class="product-info">
+                        <h3>Motorola Edge 40</h3>
+                        <p class="product-description">Pantalla pOLED de 6.55", Dimensity 8020, Cámara de 50MP con OIS</p>
+                        <div class="price">S/ 2,199 <span class="old-price">S/ 2,599</span></div>
+                        <div class="rating" aria-label="Calificación: 4.5 estrellas">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(87)</span>
+                        </div>
+                        <a href="pages/detalle-producto.html?id=4" class="btn btn-details">Ver Detalles</a>
+                        <button class="btn-add-to-cart" data-id="4">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-cta">
+                <a href="pages/catalogo.html" class="btn btn-primary">Ver Todos los Productos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner Promocional -->
+    <section class="promo-banner">
+        <div class="container">
+            <div class="promo-content">
+                <h2>¡Plan Renovación 2025!</h2>
+                <p>Cambia tu celular viejo y obtén un descuento adicional de hasta S/ 500</p>
+                <a href="pages/contacto.html" class="btn btn-outline">Más Información</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beneficios -->
+    <section class="benefits-section" aria-labelledby="beneficios-tienda">
+        <div class="container">
+            <h2 class="section-title" id="beneficios-tienda">¿Por qué elegirnos?</h2>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Garantía Extendida</h3>
+                    <p>Todos nuestros productos incluyen 12 meses de garantía directa con el fabricante.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Envío Rápido</h3>
+                    <p>Recibe tu pedido en 24-48 horas en Lima Metropolitana.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Pago Seguro</h3>
+                    <p>Plataforma de pago cifrada con certificación PCI DSS.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Soporte 24/7</h3>
+                    <p>Nuestro equipo de soporte está disponible para ayudarte.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Testimonios -->
+<section class="testimonials-section" aria-labelledby="testimonios-clientes">
+    <div class="container">
+        <h2 class="section-title" id="testimonios-clientes">Nuestros clientes 😊</h2>
+        
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <img src="assets/images/usuarios/carlos.jpg" alt="Foto de Carlos Mendoza" class="user-avatar" loading="lazy">
+                    <div class="rating" aria-label="Calificación: 5 estrellas">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Excelente servicio postventa, resolvieron mi consulta sobre garantía en menos de 24 horas."</p>
+                </div>
+                <div class="testimonial-author">
+                    <h3 class="author-name">Carlos Mendoza</h3>
+                    <p class="author-location">Lima, Perú</p>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <img src="assets/images/usuarios/ana.jpg" alt="Foto de Ana Torres" class="user-avatar" loading="lazy">
+                    <div class="rating" aria-label="Calificación: 5 estrellas">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Recibí mi pedido antes de lo esperado y en perfectas condiciones. ¡Muy recomendados!"</p>
+                </div>
+                <div class="testimonial-author">
+                    <h3 class="author-name">Ana Torres</h3>
+                    <p class="author-location">Arequipa, Perú</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter -->
+<section class="newsletter-section">
+    <div class="container">
+        <div class="newsletter-content">
+            <h2>Suscríbete a nuestro newsletter</h2>
+            <p>Recibe ofertas exclusivas y las últimas novedades en tecnología.</p>
+            
+            <form class="newsletter-form">
+                <div class="form-group">
+                    <input type="email" placeholder="Tu correo electrónico" required aria-label="Ingresa tu correo electrónico">
+                    <button type="submit" class="btn btn-primary">Suscribirse</button>
+                </div>
+            </form>
+            <p class="privacy-text">Al suscribirte aceptas nuestra <a href="pages/privacidad.html">Política de Privacidad</a></p>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Testimonios */
+    .testimonials-section {
+        background-color: #f9f9f9;
+        padding: 60px 20px;
+        text-align: center;
+        animation: fadeIn 1s ease-in-out;
+    }
+    
+    .testimonials-grid {
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .testimonial-card {
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+        padding: 25px;
+        max-width: 320px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .testimonial-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    .user-avatar {
+        border-radius: 50%;
+        width: 90px;
+        height: 90px;
+        margin-bottom: 20px;
+        border: 3px solid #3498db;
+        transition: transform 0.3s ease;
+    }
+    
+    .user-avatar:hover {
+        transform: scale(1.1);
+    }
+    
+    .rating i {
+        color: #ffc107;
+        font-size: 1.2rem;
+    }
+    
+    .testimonial-text {
+        font-style: italic;
+        color: #555;
+        margin: 20px 0;
+        font-size: 1rem;
+    }
+    
+    .author-name {
+        font-weight: bold;
+        color: #333;
+        font-size: 1.1rem;
+    }
+    
+    .author-location {
+        font-size: 0.9rem;
+        color: #777;
+    }
+    
+    /* Newsletter */
+    .newsletter-section {
+        background: linear-gradient(135deg, #007bff, #0056b3);
+        color: #fff;
+        padding: 60px 20px;
+        text-align: center;
+        animation: fadeInUp 1s ease-in-out;
+        border-radius: 15px;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .newsletter-content h2 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        font-weight: bold;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    
+    .newsletter-content p {
+        font-size: 1.2rem;
+        margin-bottom: 25px;
+        color: #f1f1f1;
+    }
+    
+    .newsletter-form {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+    
+    .newsletter-form .form-group {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    
+    .newsletter-form input {
+        padding: 12px;
+        border: none;
+        border-radius: 8px;
+        width: 280px;
+        font-size: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease;
+    }
+    
+    .newsletter-form input:focus {
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        outline: none;
+    }
+    
+    .newsletter-form button {
+        padding: 12px 25px;
+        border: none;
+        border-radius: 8px;
+        background-color: #ffc107;
+        color: #333;
+        font-weight: bold;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .newsletter-form button:hover {
+        background-color: #e0a800;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .privacy-text a {
+        color: #ffc107;
+        text-decoration: underline;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+    
+    .privacy-text a:hover {
+        color: #e0a800;
+    }
+    
+    /* Animaciones */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    </style>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <img src="assets/images/logos/logo-tienda.png" alt="Tienda de Celulares - Logo" class="footer-logo" loading="lazy">
+                    <p>Tu tienda confiable de tecnología con los mejores precios del mercado peruano.</p>
+                    
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="pages/catalogo.html">Catálogo</a></li>
+                        <li><a href="pages/contacto.html">Contacto</a></li>
+                        <li><a href="pages/login.html">Mi Cuenta</a></li>
+                        <li><a href="pages/registro.html">Registro</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Av. Arequipa 123, Huancayo</li>
+                        <li><i class="fas fa-phone"></i> +51 974 225 039</li>
+                        <li><i class="fas fa-envelope"></i> kevlex.delacruz@gmail.com</li>
+                        <li><i class="fas fa-clock"></i> Lunes a Sábado: 9AM - 8PM</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-payment">
+                    <h3>Métodos de Pago</h3>
+                    <div class="payment-methods">
+                        <img src="assets/images/icons/visa.png" alt="Visa" loading="lazy">
+                        <img src="assets/images/icons/mastercard.png" alt="Mastercard" loading="lazy">
+                        <img src="assets/images/icons/paypal.png" alt="PayPal" loading="lazy">
+                        <img src="assets/images/icons/yape.png" alt="Yape" loading="lazy">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2025 Tienda de Celulares. Todos los derechos reservados.</p>
+                </div>
+                <div class="footer-credits">
+                    <p>Desarrollado por <a href="Kevin Alex Cardenas De la Cruz" target="_blank">Kevin Alex Cardenas De la Cruz</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/+51974225039" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contáctanos por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/productos.js"></script>
+    
+    <script>
+        // Scripts mejorados para index.html
+        document.addEventListener('DOMContentLoaded', function() {
+            // Menú móvil
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navbar = document.querySelector('.navbar');
+            
+            menuToggle.addEventListener('click', function() {
+                const isExpanded = navbar.classList.toggle('active');
+                this.setAttribute('aria-expanded', isExpanded);
+                this.querySelector('i').classList.toggle('fa-times');
+            });
+            
+            // Actualizar contador del carrito
+            function updateCartCount() {
+                try {
+                    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                    const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+                    document.getElementById('cart-count').textContent = totalItems;
+                } catch (e) {
+                    console.error('Error al cargar el carrito:', e);
+                    document.getElementById('cart-count').textContent = '0';
+                }
+            }
+            
+            // Inicializar contador del carrito
+            updateCartCount();
+            
+            // Añadir al carrito
+            document.addEventListener('click', function(e) {
+                if (e.target.classList.contains('btn-add-to-cart')) {
+                    e.preventDefault();
+                    const productId = e.target.getAttribute('data-id');
+                    const productCard = e.target.closest('.product-card');
+                    
+                    try {
+                        // Obtener información del producto
+                        const productName = productCard.querySelector('h3').textContent;
+                        const productPrice = productCard.querySelector('.price').textContent
+                            .replace('S/ ', '')
+                            .replace(',', '')
+                            .replace(/[^\d.]/g, '');
+                        const productImage = productCard.querySelector('img').src;
+                        
+                        // Obtener o inicializar el carrito
+                        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                        
+                        // Buscar si el producto ya está en el carrito
+                        const existingProductIndex = cart.findIndex(item => item.id === productId);
+                        
+                        if (existingProductIndex !== -1) {
+                            // Incrementar cantidad si ya existe
+                            cart[existingProductIndex].quantity += 1;
+                        } else {
+                            // Agregar nuevo producto al carrito
+                            cart.push({
+                                id: productId,
+                                name: productName,
+                                price: parseFloat(productPrice),
+                                image: productImage,
+                                quantity: 1
+                            });
+                        }
+                        
+                        // Guardar en localStorage
+                        localStorage.setItem('cart', JSON.stringify(cart));
+                        
+                        // Actualizar contador
+                        updateCartCount();
+                        
+                        // Feedback visual
+                        const button = e.target;
+                        const originalText = button.textContent;
+                        const originalBgColor = button.style.backgroundColor;
+                        
+                        button.textContent = '✓ Añadido';
+                        button.style.backgroundColor = '#2ecc71';
+                        
+                        // Restaurar después de 2 segundos
+                        setTimeout(() => {
+                            button.textContent = originalText;
+                            button.style.backgroundColor = originalBgColor;
+                        }, 2000);
+                        
+                    } catch (error) {
+                        console.error('Error al añadir al carrito:', error);
+                        alert('Ocurrió un error al añadir el producto al carrito.');
+                    }
+                }
+            });
+            
+            // Manejar el formulario de newsletter
+            const newsletterForm = document.querySelector('.newsletter-form');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const emailInput = this.querySelector('input[type="email"]');
+                    const email = emailInput.value.trim();
+                    
+                    // Validación simple de email
+                    if (!email || !email.includes('@') || !email.includes('.')) {
+                        alert('Por favor ingresa un correo electrónico válido.');
+                        return;
+                    }
+                    
+                    // Aquí normalmente harías una petición AJAX para guardar el email
+                    // Simulamos el éxito de la suscripción
+                    this.innerHTML = `
+                        <div class="newsletter-success">
+                            <i class="fas fa-check-circle"></i>
+                            <p>¡Gracias por suscribirte! Te hemos enviado un correo de confirmación.</p>
+                        </div>
+                    `;
+                    
+                    // Opcional: Guardar en localStorage para no mostrar de nuevo
+                    localStorage.setItem('subscribedToNewsletter', 'true');
+                });
+            }
+            
+            // Cargar productos destacados (simulación)
+            function loadFeaturedProducts() {
+                // En una implementación real, esto vendría de una API
+                console.log('Cargando productos destacados...');
+            }
+            
+            // Inicializar funciones
+            loadFeaturedProducts();
+        });
+    </script>
+</body>
+</html>

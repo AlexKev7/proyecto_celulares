@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro | Tienda de Celulares</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="../assets/images/icons/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos específicos para registro */
+        .register-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('../assets/images/banners/banner-register.jpg') center/cover;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .register-container {
+            max-width: 600px;
+            margin: 0 auto 4rem;
+            padding: 0 1rem;
+        }
+        
+        .register-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 2.5rem;
+            margin-top: -50px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .register-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+        }
+        
+        .progress-steps {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        .progress-steps::before {
+            content: "";
+            position: absolute;
+            top: 15px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: #ecf0f1;
+            z-index: 0;
+        }
+        
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .step-number {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #bdc3c7;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .step.active .step-number {
+            background-color: #3498db;
+        }
+        
+        .step.completed .step-number {
+            background-color: #2ecc71;
+        }
+        
+        .step-text {
+            font-size: 0.8rem;
+            color: #7f8c8d;
+        }
+        
+        .step.active .step-text {
+            color: #3498db;
+            font-weight: 600;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-control:focus {
+            border-color: #3498db;
+            outline: none;
+        }
+        
+        .password-wrapper {
+            position: relative;
+        }
+        
+        .toggle-password {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #7f8c8d;
+        }
+        
+        .password-strength {
+            height: 4px;
+            background-color: #ecf0f1;
+            margin-top: 0.5rem;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+        
+        .strength-bar {
+            height: 100%;
+            width: 0%;
+            background-color: #e74c3c;
+            transition: width 0.3s, background-color 0.3s;
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .form-row .form-group {
+            flex: 1;
+        }
+        
+        .terms-group {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+        
+        .terms-group input {
+            margin-right: 0.8rem;
+            margin-top: 0.2rem;
+        }
+        
+        .terms-group label {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+        
+        .terms-group a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        .terms-group a:hover {
+            text-decoration: underline;
+        }
+        
+        .btn-register {
+            width: 100%;
+            padding: 1rem;
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .btn-register:hover {
+            background-color: #27ae60;
+        }
+        
+        .login-link {
+            text-align: center;
+            margin-top: 2rem;
+            color: #7f8c8d;
+        }
+        
+        .login-link a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Ocultar pasos no activos */
+        .form-step {
+            display: none;
+        }
+        
+        .form-step.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de Navegación simplificada -->
+    <header class="header">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/logos/logo-tienda.png" alt="Logo Tienda de Celulares">
+            </a>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="../index.html">Volver al Inicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="register-hero">
+        <div class="container">
+            <h1>Únete a nuestra comunidad</h1>
+        </div>
+    </section>
+
+    <!-- Formulario de Registro -->
+    <div class="register-container">
+        <div class="register-card">
+            <h2 class="register-title">Crea tu cuenta</h2>
+            
+            <!-- Pasos del registro -->
+            <div class="progress-steps">
+                <div class="step active" data-step="1">
+                    <div class="step-number">1</div>
+                    <div class="step-text">Información básica</div>
+                </div>
+                <div class="step" data-step="2">
+                    <div class="step-number">2</div>
+                    <div class="step-text">Datos personales</div>
+                </div>
+                <div class="step" data-step="3">
+                    <div class="step-number">3</div>
+                    <div class="step-text">Finalizar</div>
+                </div>
+            </div>
+            
+            <!-- Formulario de varios pasos -->
+            <form id="registerForm">
+                <!-- Paso 1: Información básica -->
+                <div class="form-step active" data-step="1">
+                    <div class="form-group">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" class="form-control" required>
+                        <div class="form-error" id="email-error"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Contraseña</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="password" class="form-control" required>
+                            <i class="fas fa-eye toggle-password" id="togglePassword"></i>
+                        </div>
+                        <div class="password-strength">
+                            <div class="strength-bar" id="strength-bar"></div>
+                        </div>
+                        <small>Mínimo 8 caracteres, 1 mayúscula y 1 número</small>
+                        <div class="form-error" id="password-error"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirm-password">Confirmar contraseña</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="confirm-password" class="form-control" required>
+                            <i class="fas fa-eye toggle-password" id="toggleConfirmPassword"></i>
+                        </div>
+                        <div class="form-error" id="confirm-password-error"></div>
+                    </div>
+                    
+                    <button type="button" class="btn btn-next-step" data-next="2">Siguiente</button>
+                </div>
+                
+                <!-- Paso 2: Datos personales -->
+                <div class="form-step" data-step="2">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="first-name">Nombres</label>
+                            <input type="text" id="first-name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Apellidos</label>
+                            <input type="text" id="last-name" class="form-control" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Teléfono</label>
+                        <input type="tel" id="phone" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="dni">DNI</label>
+                        <input type="text" id="dni" class="form-control" required maxlength="8">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="birthdate">Fecha de nacimiento</label>
+                        <input type="date" id="birthdate" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <button type="button" class="btn btn-prev-step" data-prev="1">Anterior</button>
+                        <button type="button" class="btn btn-next-step" data-next="3">Siguiente</button>
+                    </div>
+                </div>
+                
+                <!-- Paso 3: Finalizar -->
+                <div class="form-step" data-step="3">
+                    <div class="form-group">
+                        <label for="address">Dirección</label>
+                        <input type="text" id="address" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="district">Distrito</label>
+                            <select id="district" class="form-control" required>
+                                <option value="">Seleccionar</option>
+                                <option value="Lima">Lima</option>
+                                <option value="Miraflores">Miraflores</option>
+                                <option value="San Isidro">San Isidro</option>
+                                <option value="Surco">Surco</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="postal-code">Código postal</label>
+                            <input type="text" id="postal-code" class="form-control">
+                        </div>
+                    </div>
+                    
+                    <div class="terms-group">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">Acepto los <a href="terminos.html">Términos y condiciones</a> y la <a href="privacidad.html">Política de privacidad</a></label>
+                    </div>
+                    
+                    <div class="terms-group">
+                        <input type="checkbox" id="newsletter">
+                        <label for="newsletter">Deseo recibir ofertas y novedades por correo electrónico</label>
+                    </div>
+                    
+                    <div class="form-row">
+                        <button type="button" class="btn btn-prev-step" data-prev="2">Anterior</button>
+                        <button type="submit" class="btn-register">Crear cuenta</button>
+                    </div>
+                </div>
+            </form>
+            
+            <div class="login-link">
+                ¿Ya tienes una cuenta? <a href="login.html">Inicia sesión aquí</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer simplificado -->
+    <footer class="footer">
+        <div class="container">
+            <div class="copyright">
+                <p>&copy; 2023 Tienda de Celulares. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mostrar/ocultar contraseña
+            const togglePassword = document.getElementById('togglePassword');
+            const password = document.getElementById('password');
+            const toggleConfirmPassword = document.getElementById('toggleConfirmPassword');
+            const confirmPassword = document.getElementById('confirm-password');
+            
+            togglePassword.addEventListener('click', function() {
+                const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+                password.setAttribute('type', type);
+                this.classList.toggle('fa-eye-slash');
+            });
+            
+            toggleConfirmPassword.addEventListener('click', function() {
+                const type = confirmPassword.getAttribute('type') === 'password' ? 'text' : 'password';
+                confirmPassword.setAttribute('type', type);
+                this.classList.toggle('fa-eye-slash');
+            });
+            
+            // Navegación entre pasos
+            const steps = document.querySelectorAll('.step');
+            const formSteps = document.querySelectorAll('.form-step');
+            
+            document.querySelectorAll('.btn-next-step').forEach(button => {
+                button.addEventListener('click', function() {
+                    const nextStep = this.dataset.next;
+                    const currentStep = document.querySelector('.form-step.active').dataset.step;
+                    
+                    // Validar campos antes de avanzar
+                    if (currentStep === '1' && !validateStep1()) return;
+                    if (currentStep === '2' && !validateStep2()) return;
+                    
+                    // Actualizar pasos
+                    document.querySelector(`.step[data-step="${currentStep}"]`).classList.remove('active');
+                    document.querySelector(`.step[data-step="${currentStep}"]`).classList.add('completed');
+                    document.querySelector(`.step[data-step="${nextStep}"]`).classList.add('active');
+                    
+                    // Actualizar formulario
+                    document.querySelector('.form-step.active').classList.remove('active');
+                    document.querySelector(`.form-step[data-step="${nextStep}"]`).classList.add('active');
+                });
+            });
+            
+            document.querySelectorAll('.btn-prev-step').forEach(button => {
+                button.addEventListener('click', function() {
+                    const prevStep = this.dataset.prev;
+                    const currentStep = document.querySelector('.form-step.active').dataset.step;
+                    
+                    // Actualizar pasos
+                    document.querySelector(`.step[data-step="${currentStep}"]`).classList.remove('active');
+                    document.querySelector(`.step[data-step="${prevStep}"]`).classList.add('active');
+                    document.querySelector(`.step[data-step="${prevStep}"]`).classList.remove('completed');
+                    
+                    // Actualizar formulario
+                    document.querySelector('.form-step.active').classList.remove('active');
+                    document.querySelector(`.form-step[data-step="${prevStep}"]`).classList.add('active');
+                });
+            });
+            
+            // Validación de fortaleza de contraseña
+            password.addEventListener('input', function() {
+                const strengthBar = document.getElementById('strength-bar');
+                const strength = calculatePasswordStrength(this.value);
+                
+                strengthBar.style.width = strength.percentage + '%';
+                strengthBar.style.backgroundColor = strength.color;
+            });
+            
+            // Validación del formulario
+            const registerForm = document.getElementById('registerForm');
+            
+            registerForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                if (validateStep3()) {
+                    // Simular registro exitoso (en un proyecto real, usarías fetch/AJAX)
+                    alert('¡Registro exitoso! Serás redirigido al inicio.');
+                    window.location.href = '../index.html';
+                }
+            });
+            
+            // Funciones de validación
+            function validateStep1() {
+                let isValid = true;
+                const email = document.getElementById('email');
+                const password = document.getElementById('password');
+                const confirmPassword = document.getElementById('confirm-password');
+                
+                // Validar email
+                if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value)) {
+                    document.getElementById('email-error').textContent = 'Ingresa un email válido';
+                    isValid = false;
+                } else {
+                    document.getElementById('email-error').textContent = '';
+                }
+                
+                // Validar contraseña
+                if (password.value.length < 8) {
+                    document.getElementById('password-error').textContent = 'La contraseña debe tener al menos 8 caracteres';
+                    isValid = false;
+                } else if (!/[A-Z]/.test(password.value) || !/[0-9]/.test(password.value)) {
+                    document.getElementById('password-error').textContent = 'Debe contener al menos 1 mayúscula y 1 número';
+                    isValid = false;
+                } else {
+                    document.getElementById('password-error').textContent = '';
+                }
+                
+                // Validar confirmación
+                if (password.value !== confirmPassword.value) {
+                    document.getElementById('confirm-password-error').textContent = 'Las contraseñas no coinciden';
+                    isValid = false;
+                } else {
+                    document.getElementById('confirm-password-error').textContent = '';
+                }
+                
+                return isValid;
+            }
+            
+            function validateStep2() {
+                // Validación básica (puedes expandirla)
+                const firstName = document.getElementById('first-name');
+                const lastName = document.getElementById('last-name');
+                const phone = document.getElementById('phone');
+                const dni = document.getElementById('dni');
+                
+                if (firstName.value.trim() === '' || lastName.value.trim() === '' || 
+                    phone.value.trim() === '' || dni.value.trim() === '' || 
+                    dni.value.length !== 8 || isNaN(dni.value)) {
+                    alert('Por favor completa todos los campos correctamente');
+                    return false;
+                }
+                
+                return true;
+            }
+            
+            function validateStep3() {
+                if (!document.getElementById('terms').checked) {
+                    alert('Debes aceptar los términos y condiciones');
+                    return false;
+                }
+                
+                return true;
+            }
+            
+            function calculatePasswordStrength(password) {
+                let strength = 0;
+                let color = '#e74c3c'; // Rojo por defecto
+                
+                // Longitud mínima
+                if (password.length >= 8) strength += 25;
+                
+                // Contiene mayúsculas
+                if (/[A-Z]/.test(password)) strength += 25;
+                
+                // Contiene números
+                if (/[0-9]/.test(password)) strength += 25;
+                
+                // Contiene caracteres especiales
+                if (/[^A-Za-z0-9]/.test(password)) strength += 25;
+                
+                // Determinar color
+                if (strength >= 75) {
+                    color = '#2ecc71'; // Verde
+                } else if (strength >= 50) {
+                    color = '#f39c12'; // Naranja
+                }
+                
+                return {
+                    percentage: strength,
+                    color: color
+                };
+            }
+        });
+    </script>
+</body>
+</html>
