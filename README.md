@@ -22,4 +22,4 @@ Proyecto_celulares/
 - ✅ Páginas de login/registro.  
 
 ## 📧 Contacto  
-¿Dudas o sugerencias? ¡Contáctame! [kevlex.delacruz@gmail.com](mailto:kevlex.delacruz@gmail.com)  
+¿Dudas o sugerencias? ¡Contáctame! [@kevlex.cardenas3@gmail.com](mailto:kevlex.cardenas3@gmail.com)  
